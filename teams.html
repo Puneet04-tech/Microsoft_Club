@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - Microsoft Club, VIT Bhopal</title>
+   <!-- Place this inside the <head> section of each file -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+        background: linear-gradient(220deg,rgb(247, 47, 64), #2980b9, #8e44ad);
+         display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+   
+    header, footer {
+        background: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        background: #1e3a5f;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+    }
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+    section {
+       width: 90%;
+        max-width: 1000px;
+        background: rgb(234, 126, 216);
+        padding: 20px;
+      margin: 20px 0;
+        border-radius: 8px;
+        color: #ffffff;
+        width: 90%;
+        max-width: 1000px;
+        background: linear-gradient(135deg, #608cf3, #a071bda2);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 20px;
+        color: #012d33;
+    }
+
+    /* New card container style */
+    .team-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .team-card {
+        background: linear-gradient(135deg, #8d73f5, #412b56);
+        border-radius: 8px;
+        padding: 40px;
+        flex: 1 1 calc(50% - 40px);
+        max-width: 350px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 8px 0px 8px rgba(1, 0, 0, 0.3);
+        border-radius: 8px;
+       
+        flex: 1 1 calc(50% - 40px);
+       max-width: 350px;
+        color: #0a1eb7;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+    .team-card:hover {
+      transform: scale(1.05);
+        background:linear-gradient(135deg, #032d53, #490329);
+        color: rgb(137, 231, 196);
+        box-shadow: 0 8px 0px 8px rgba(0, 0, 0, 0.7);
+        
+    }
+    .team-card h2 {
+        margin-bottom: 10px;
+        color: #4118d5;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        font-size: 1.4em;
+    }
+    .team-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .team-card p{
+        margin-bottom: 15px;
+        font: 1.2em sans-serif;
+    }
+      .back-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #3a058f;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    .back-btn:hover {
+        background: #73026a;
+    }
+    section h2 {
+        margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        transform: translateY(-10px);
+    text-align: center;
+        font-size: 2.5rem;
+    }
+</style>
+</head>
+<body>
+
+    <main>
+        <section>
+            <h2>Our Teams</h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <h2>Development Team</h2>
+                    <p>Responsible for building and maintaining the club's projects.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h2>Design Team</h2>
+                    <p>Focuses on the visual aspects of our projects and events.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h2>Marketing Team</h2>
+                    <p>Handles promotion and outreach for the club's activities.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h2>Event Management Team</h2>
+                    <p>Organizes events and ensures everything runs smoothly.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h2>Content Team</h2>
+                    <p>Creates engaging content for our community and social channels.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <h2>Business Development Team</h2>
+                    <p>Identifies and develops new opportunities for growth and partnerships.</p>
+                    <ul>
+                        <li>Member 1</li>
+                        <li>Member 2</li>
+                        <li>Member 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="back-container">
+            <a href="index.html" class="back-btn">Back to main page</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Microsoft Club, VIT Bhopal. All rights reserved.</p>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

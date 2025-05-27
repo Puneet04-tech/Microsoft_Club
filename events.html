@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Microsoft Club, VIT Bhopal</title>
+    <!-- Place this inside the <head> section of each file -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+        background: linear-gradient(120deg,rgb(161, 8, 69), #2980b9, #8e44ad);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    } 
+    
+    header, footer {
+        background: linear-gradient( 120deg,#3a058f, #b10a18);
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-align: center;
+        padding: 20px;
+    }
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        background: linear-gradient( #2607e9, #900213);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+    section {
+        width: 90%;
+        max-width: 800px;
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        color: #ffffff;
+    }
+    
+    
+    .events-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .card {
+        position: relative;
+        overflow: hidden;
+        background: rgba(41, 18, 156, 0.599);
+        border-radius: 8px;
+        padding: 20px;
+        color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+        transform: translateY(-10px) scale(1.06);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        background:linear-gradient(135deg,purple, #0baec7a2, #6fc90f);
+        color: blue;    
+    }
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(65, 32, 32, 0) 0%, rgba(222, 172, 218, 0.4) 50%, rgba(255,255,255,0) 100%);
+        transform: skewX(-25deg);
+        animation: shine 5s infinite;
+    }
+    @keyframes shine {
+        0% {
+            left: -75%;
+        }
+        50% {
+            left: 125%;
+        }
+        100% {
+            left: 125%;
+        }
+    }
+    .card h2 {
+        margin-bottom: 10px;
+        color: black;
+    }
+    .card p {
+        line-height: 1.5;
+        color: #011820;
+    }
+      .back-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #3a058f;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    .back-btn:hover {
+        background: #73026a;
+    }
+    
+</style>
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+    </header>
+    <main>
+        <section class="events-list">
+            <div class="card">
+                <h2><strong>Azure Cloud Bootcamp</strong></h2>
+                <p><strong>Date: June 15, 2025</strong></p>
+                <p>
+                    <br>
+                    Description:<br>
+                    This intensive hands-on workshop introduces students to Microsoft Azure's core services, including virtual machines, web apps, and databases. Participants learn how to deploy cloud-based solutions and explore real-world use cases like hosting a website or creating a chatbot. The event concludes with a mini-project and a quiz, and top performers earn Azure credits and certificates.
+                </p>
+            </div>
+            <div class="card">
+                <h2><strong>Code with GitHub Copilot</strong></h2>
+                <p><strong>Date: July 20, 2025</strong></p>
+                <p>
+                    <br>
+                    Description:<br>
+                    This event explores Microsoft's AI-powered coding assistant, GitHub Copilot. Students engage in a live coding session where they build a basic web application using HTML, CSS, and JavaScript with Copilot’s help. The event also features a discussion on the future of AI-assisted development and a mini-hackathon where teams use Copilot to solve coding challenges.
+                </p>
+            </div>
+            <div class="card">
+                <h2><strong>Tech Talk: Careers at Microsoft</strong></h2>
+                <p><strong>Date: August 10, 2025</strong></p>
+                <p>
+                    <br>
+                    Description:<br>
+                    A speaker session featuring Microsoft alumni and professionals discussing career opportunities, internships, and roles at Microsoft. Attendees gain insights into resume building, interview preparation, and the application process. The event includes a Q and A segment and networking opportunities for students aiming to break into tech roles at Microsoft.
+                </p>
+            </div>
+           <div class="card">
+                <h2><strong>Innovation Lab: Microsoft Tech Unleashed</strong></h2>
+                <p><strong>Date: September 05, 2025</strong></p>
+                <p>
+                    <br>
+                    Description:<br>
+                    Join us for an immersive session where Microsoft Club members explore cutting-edge Microsoft technologies in our Innovation Lab. Experience live demos of mixed reality, IoT, and AI-powered solutions. Participants collaborate on innovative projects and gain insights from industry experts, setting the stage for the future of tech.
+                </p>
+            </div>
+        </section>
+        <div class="back-container">
+            <a href="index.html" class="back-btn">Back to main page</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Microsoft Club, VIT Bhopal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

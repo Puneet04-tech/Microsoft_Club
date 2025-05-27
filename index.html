@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Club, VIT Bhopal</title>
+   <style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(360deg,rgb(53, 6, 87), #2952b9, #d92146);
+}
+
+/* Only the updated hero-content definition is needed */
+.hero-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.nav-logo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#vt-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateX(-10px) translateY(-10px); 
+    background-color: rgb(161, 126, 236);
+}
+#vt-logo:hover {
+    transform: translateX(0) translateY(0) scale(1.05);
+}
+/* Hero content header styles */
+.hero-content .header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Base heading styles (the transform is removed by .hero-content h1 below) */
+h1 {
+    font-weight: bold;
+    font-size: 6rem;
+    background: linear-gradient(360deg,green,#3a058f, #73026a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(1, 3, 4, 0.9);
+}
+
+/* Base paragraph styles (transform removed by .hero-content p below) */
+p {
+    font-size: 1.5rem;
+    background: linear-gradient(#3a058f, #450240);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 3px rgba(1, 3, 4, 0.5);
+    font-weight: 1000;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+
+
+
+/* Arrangements for pictures */
+
+/* Arrangements for pictures */
+.beautiful-pictures {
+    margin-left: 300px; /* start after nav bar */
+    width: calc(100% - 300px);
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.image-track {
+    display: flex;
+    gap: 20px;
+    animation: scrollHorizontal 10s linear infinite;
+}
+
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Adjust this value as needed if your track is longer */
+    }
+}
+
+.beautiful-pictures img {
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Images stay in a single horizontal line */
+}
+
+/* Description card styling */
+.description {
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #000136;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.description:hover {
+    background:linear-gradient(90deg,purple, rgba(7, 193, 119, 0.8), rgba(222, 9, 23, 0.5));
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background 1s ease, transform 0.3s ease;
+}
+/* Introduction title styling */
+.intro-title {
+    color: rgb(1, 30, 30);
+    font-size: 2rem;
+    font-style: normal;
+}
+
+/* Fixed left nav bar */
+/* Base styles remain the same */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 2px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 16, 60, 0.85), rgb(118, 74, 145));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.nav-logo {
+    margin-bottom: 20px;
+}
+.nav-logo img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 0;
+}
+.nav-links li {
+    list-style: none;
+    margin: 15px 0;
+}
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #250130;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+.nav-links li a:hover {
+    color: #66ecee;
+    text-decoration: wavy;
+    transform: translateX(10px) scale(1.05);
+    
+    background-color: rgba(225, 47, 47, 0.1);
+}
+.nav-links li a.active {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Hero Content */
+.hero-content {
+    margin-left: 320px; /* start after nav bar with some gap */
+    padding: 20px;
+    transform: translateX(-100px) ; /* slight offset for visual effect */
+}
+.hero-content .header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero-content p,
+.description {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Pictures container */
+.beautiful-pictures {
+    margin-left: 320px;
+    width: calc(100% - 320px);
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.image-track {
+    display: flex;
+    gap: 20px;
+    animation: scrollHorizontal 20s linear infinite;
+}
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.beautiful-pictures img {
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 992px) {
+    .nav-bar {
+        width: 220px;
+    }
+    .hero-content {
+        margin-left: 240px;
+        padding: 10px;
+    }
+    .beautiful-pictures {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+    .hero-content .header h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p,
+    .description {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-bar {
+        width: 180px;
+    }
+    .hero-content {
+        margin-left: 200px;
+        padding: 10px;
+    }
+    .beautiful-pictures {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+    .hero-content .header h1 {
+        font-size: 2rem;
+    }
+    .hero-content p,
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+
+   </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo">
+            <img id="vt-logo" src="assets/images/vtop.jpeg" alt="VIT Bhopal Logo">
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="about.html"><i class="fas fa-phone"></i>About US</a>
+            </li>
+            <li>
+                <a href="events.html"><i class="fas fa-user"></i>Events</a>
+            </li>
+            <li>
+                <a href="teams.html"><i class="fas fa-info-circle"></i> Teams</a>
+            </li>
+            <li>
+                <a href="contact.html"><i class="fas fa-user-graduate"></i> Contact US</a>
+            </li>
+        </ul>
+    </nav>
+<div id="container">
+    <!-- Hero Content with heading at the top -->
+    <div class="hero-content">
+        <div class="header">
+            <h1>Welcome to Microsoft Club, VIT Bhopal</h1>
+        </div>
+        <p>Empowering students through technology and innovation.</p>
+<br>
+
+<p class="description">
+     <strong class="intro-title">INTRODUCTION</strong><br>
+
+🔹 Microsoft Club - Empowering Tech Enthusiasts<br>
+    Microsoft Club is a community of passionate students exploring the world of Microsoft technologies. We organize workshops, hackathons, and hands-on sessions to help members build skills in cloud, AI, development, and more. Whether you're a beginner or a pro, this is your space to learn, innovate, and grow with the power of technology.
+</p>
+    </div>
+
+    <!-- Pictures container placed below the heading -->
+    <div class="beautiful-pictures">
+         <div class="image-track">
+        <img src="assets/images/microsoft_picture_1.png" alt="Microsoft Club Image 1">
+        <img src="assets/images/microsoft_picture_2.png" alt="Microsoft Club Image 2">
+        <img src="assets/images/microsoft_picture_3.png" alt="Microsoft Club Image 3">
+        <img src="assets/images/microsoft_picture_4.png" alt="Microsoft Club Image 1">
+         <img src="assets/images/microsoft_picture_5.png" alt="Microsoft Club Image 1">
+        <!-- Add more images as needed -->
+    </div>
+    </div>
+</div>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

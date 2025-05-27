@@ -1,0 +1,27 @@
+{
+  "name": "microsoft-club-website",
+  "version": "1.0.0",
+  "description": "Official website for the Microsoft Club at VIT Bhopal University.",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "Microsoft",
+    "Club",
+    "VIT Bhopal",
+    "Website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}
